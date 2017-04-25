@@ -14,6 +14,9 @@ class LoginController extends Controller {
         $this->display();
     }
 
+    /**
+     * 验证登录过程
+     */
     public function check() {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -40,7 +43,10 @@ class LoginController extends Controller {
 
 
     }
-    //TODO
+
+    /**
+     *退出登录操作
+     */
     public function loginout() {
         session('adminUser', null);
         $this->redirect('login/index');
