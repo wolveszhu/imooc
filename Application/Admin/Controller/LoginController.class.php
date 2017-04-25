@@ -8,10 +8,9 @@ use Think\Controller;
 class LoginController extends Controller {
 
     public function index(){
-        /*if(session('adminUser')) {
-           $this->redirect('/imooc/admin.php?c=index');
-        }*/
-        // admin.php?c=index
+        if(session('adminUser')) {
+           $this->redirect('index/index');
+        }
         $this->display();
     }
 
@@ -44,7 +43,7 @@ class LoginController extends Controller {
     //TODO
     public function loginout() {
         session('adminUser', null);
-        $this->redirect('/imooc/admin.php?c=login');
+        $this->redirect('login/index');
     }
 
 }
