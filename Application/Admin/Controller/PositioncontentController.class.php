@@ -6,7 +6,7 @@ namespace Admin\Controller;
 use Think\Controller;
 use Think\Exception;
 
-class PositioncontentController extends Controller {
+class PositioncontentController extends CommonController {
     public function index(){
         $positions = D("Position")->getNormalPositions();
         // 获取推荐位里面的内容

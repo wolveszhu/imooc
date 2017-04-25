@@ -4,7 +4,7 @@
  */
 namespace Admin\Controller;
 use Think\Controller;
-class PositionController extends Controller {
+class PositionController extends CommonController {
     public function index()
     {
         $data['status'] = array('neq',-1);

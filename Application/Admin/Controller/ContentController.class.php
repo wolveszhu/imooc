@@ -9,7 +9,7 @@ use Think\Exception;
 /**
  * 文章内容管理
  */
-class ContentController extends Controller {
+class ContentController extends CommonController {
 
     public function index() {
         $conds = array();
